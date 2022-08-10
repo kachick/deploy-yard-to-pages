@@ -21,7 +21,7 @@ jobs:
       - name: Wait other jobs are passed or failed
         if: ${{steps.metadata.outputs.update-type != 'version-update:semver-major'}}
         uses: kachick/wait-other-jobs@v1
-        timeout-minutes: 30
+        timeout-minutes: 10
         with:
           github-token: '${{ secrets.GITHUB_TOKEN }}'
       - name: Auto approve and merge

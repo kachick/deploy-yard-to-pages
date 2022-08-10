@@ -4,34 +4,34 @@ on:
     branches: [main]
     paths-ignore:
       - '.github/dependabot.yml'
-      - '.github/workflows/test.yml'
+      - '.github/workflows/dprint.yml'
       - '.github/workflows/dependency-review.yml'
       - '.github/workflows/auto-merge-dependabot-prs.yml'
-      - '.github/workflows/codeql-analysis.yml'
-      - 'LICENSE'
       - '.editorconfig'
       - 'dprint.json'
-      - '.eslintrc.js'
       - 'README.md'
       - '.vscode/**'
   pull_request:
     paths-ignore:
       - '.github/dependabot.yml'
-      - '.github/workflows/test.yml'
+      - '.github/workflows/dprint.yml'
       - '.github/workflows/dependency-review.yml'
       - '.github/workflows/auto-merge-dependabot-prs.yml'
-      - '.github/workflows/codeql-analysis.yml'
-      - 'LICENSE'
       - '.editorconfig'
       - 'dprint.json'
-      - '.eslintrc.js'
       - 'README.md'
       - '.vscode/**'
 
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
-  contents: write
-  checks: read
-  actions: read
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment
+concurrency:
+  group: 'pages'
+  cancel-in-progress: true
 
 jobs:
   validate: # make sure the action works on a clean machine without building
@@ -40,5 +40,3 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: ./
-        with:
-          github-token: '${{ secrets.GITHUB_TOKEN }}'
