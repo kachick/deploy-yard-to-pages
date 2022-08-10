@@ -26,4 +26,4 @@ runs:
         # Upload entire repository
         path: ${{ inputs.output-dir }}
     - id: deployment
-      uses: actions/deploy-pages@main
+      uses: actions/deploy-pages@v1
