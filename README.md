@@ -43,9 +43,9 @@ jobs:
     name: Build and deploy YARD
     steps:
       - uses: kachick/deploy-yard-to-pages@v1
-        with:
-           # default `doc` as default of `.yardopts`
-          output-dir: 'docs'
+        # with:
+          # # default `doc` as default of `.yardopts`
+          # output-dir: 'docs'
 ```
 
 Deployed example is [here](https://kachick.github.io/deploy-yard-to-pages/). It has been generated from [example of this repo](lib/foobar.rb).
