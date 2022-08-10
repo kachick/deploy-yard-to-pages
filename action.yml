@@ -27,3 +27,5 @@ runs:
         path: ${{ inputs.output-dir }}
     - id: deployment
       uses: actions/deploy-pages@main
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
