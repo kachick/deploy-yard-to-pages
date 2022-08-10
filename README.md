@@ -1,8 +1,8 @@
 # deploy-yard-to-pages
 
-[![Test & Lint](https://github.com/kachick/deploy-yard-to-pages/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/kachick/deploy-yard-to-pages/actions/workflows/ci.yml?query=branch%3Amain++)
+[![CI](https://github.com/kachick/deploy-yard-to-pages/actions/workflows/validate.yml/badge.svg?branch=main)](https://github.com/kachick/deploy-yard-to-pages/actions/workflows/validate.yml?query=branch%3Amain++)
 
-Deploy YARD generated documents to GitHub Pages with actions
+Deploy YARD generated documents to GitHub Pages with composite action
 
 # Usage
 
@@ -35,6 +35,9 @@ concurrency:
 
 jobs:
   deploy_yard:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     name: Build and deploy YARD
     steps:
@@ -43,3 +46,5 @@ jobs:
            # default `doc` as default of `.yardopts`
           output-dir: 'docs'
 ```
+
+Deployed example is [here](https://kachick.github.io/deploy-yard-to-pages/). It has been generated from [example of this repo](lib/foobar.rb).
