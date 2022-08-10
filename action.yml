@@ -5,6 +5,9 @@ branding:
   icon: 'upload'
   color: 'blue'
 inputs:
+  github-token:
+    description: 'GitHub token (Basically PAT is needless. Passing GITHUB_TOKEN is enough.)'
+    required: true
   output-dir:
     description: 'YARD generated HTMls in'
     required: true
@@ -28,4 +31,4 @@ runs:
     - id: deployment
       uses: actions/deploy-pages@main
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ inputs.github-token }}

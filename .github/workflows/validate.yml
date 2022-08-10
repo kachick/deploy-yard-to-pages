@@ -1,4 +1,4 @@
-name: Validate with running on my own
+name: Validate
 on:
   push:
     branches: [main]
@@ -21,6 +21,7 @@ on:
       - 'dprint.json'
       - 'README.md'
       - '.vscode/**'
+  workflow_dispatch:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
@@ -40,3 +41,5 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: ./
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
