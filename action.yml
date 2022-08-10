@@ -1,0 +1,21 @@
+name: 'my-new-action'
+description: 'There is a sin of omission as well as of commission.'
+author: 'Kenichi Kamiya <kachick1@gmail.com>'
+branding:
+  icon: 'check-circle'
+  color: 'green'
+inputs:
+  github-token:
+    description: 'GitHub token (Basically PAT is needless. Passing GITHUB_TOKEN is enough.)'
+    required: true
+  early-exit:
+    description: 'Stop to rest pollings if faced at least 1 bad condition'
+    required: false
+    default: 'true'
+  dry-run:
+    description: 'Avoid http requests for tests'
+    required: false
+    default: 'false'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
