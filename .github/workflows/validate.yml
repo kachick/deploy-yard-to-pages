@@ -27,8 +27,6 @@ on:
 permissions:
   contents: read
   pages: write
-  # https://github.com/actions/deploy-pages/issues/9
-  deployments: write
   id-token: write
 
 # Allow one concurrent deployment
@@ -38,8 +36,12 @@ concurrency:
 
 jobs:
   validate: # make sure the action works on a clean machine without building
+    # https://github.com/actions/deploy-pages/issues/9
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v3
       - uses: ./

@@ -27,7 +27,3 @@ runs:
         path: ${{ inputs.output-dir }}
     - id: deployment
       uses: actions/deploy-pages@main
-      # https://github.com/actions/deploy-pages/issues/9
-      env:
-        name: github-pages
-        url: ${{ steps.deployment.outputs.page_url }}
