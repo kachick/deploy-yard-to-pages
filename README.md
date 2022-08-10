@@ -40,7 +40,6 @@ jobs:
     steps:
       - uses: kachick/deploy-yard-to-pages@v1
         with:
-          github-token: ${{secrets.GITHUB_TOKEN}
            # default `doc` as default of `.yardopts`
           output-dir: 'docs'
 ```
