@@ -27,6 +27,8 @@ on:
 permissions:
   contents: read
   pages: write
+  # https://github.com/actions/deploy-pages/issues/9
+  deployments: write
   id-token: write
 
 # Allow one concurrent deployment
