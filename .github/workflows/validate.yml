@@ -25,10 +25,10 @@ on:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
-  contents: read # For dependabot PRs
-  actions: write
-  pages: write
-  id-token: write
+  # contents: read
+  # pages: write
+  # id-token: write
+  write-all
 
 # Allow one concurrent deployment
 concurrency:
