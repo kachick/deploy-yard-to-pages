@@ -6,7 +6,7 @@ on:
       - '.github/dependabot.yml'
       - '.github/workflows/dprint.yml'
       - '.github/workflows/dependency-review.yml'
-      - '.github/workflows/auto-merge-dependabot-prs.yml'
+      - '.github/workflows/merge-bot-pr.yml'
       - '.editorconfig'
       - 'dprint.json'
       - 'README.md'
