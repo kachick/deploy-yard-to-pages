@@ -27,7 +27,7 @@ runs:
     - uses: actions/configure-pages@v2
     - uses: actions/upload-pages-artifact@v1
       with:
-        # Upload entire repository
+        # By default, upload the docs directory
         path: ${{ inputs.output-dir }}
     - id: deployment
       uses: actions/deploy-pages@v1
