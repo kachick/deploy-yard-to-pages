@@ -42,10 +42,21 @@ jobs:
     runs-on: ubuntu-latest
     name: Build and deploy YARD
     steps:
-      - uses: kachick/deploy-yard-to-pages@v1
+      - uses: kachick/deploy-yard-to-pages@v1.1.0
         # with:
           # # default `doc` as default of `.yardopts`
           # output-dir: 'docs'
 ```
+
+## Ruby version
+
+| action | ruby  |
+| ------ | ----- |
+| v1.1.0 | 3.2.0 |
+| v1.0.0 | 3.1.0 |
+
+Planning to be able to specify the ruby-version
+
+## Example
 
 Deployed example is [here](https://kachick.github.io/deploy-yard-to-pages/). It has been generated from [example of this repo](lib/foobar.rb).
