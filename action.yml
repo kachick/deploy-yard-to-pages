@@ -9,6 +9,10 @@ inputs:
     description: 'YARD generated HTMls in'
     required: true
     default: 'doc'
+  ruby-version:
+    description: 'YARD runner will be executed with this ruby version'
+    required: true
+    default: '3.2'
 runs:
   using: 'composite'
   steps:
@@ -16,7 +20,7 @@ runs:
       uses: actions/checkout@v3
     - uses: ruby/setup-ruby@v1
       with:
-        ruby-version: '3.2'
+        ruby-version: ${{ inputs.ruby-version }}
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
     - run: bundle exec yard
       shell: bash

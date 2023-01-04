@@ -42,20 +42,30 @@ jobs:
     runs-on: ubuntu-latest
     name: Build and deploy YARD
     steps:
-      - uses: kachick/deploy-yard-to-pages@v1.1.0
+      - uses: kachick/deploy-yard-to-pages@v1.2.0
         # with:
           # # default `doc` as default of `.yardopts`
           # output-dir: 'docs'
+          # # default version is 3.2
+          # ruby-version: '3.2'
 ```
 
-## Ruby version
+## Parameters
 
-| action | ruby  |
-| ------ | ----- |
-| v1.1.0 | 3.2.0 |
-| v1.0.0 | 3.1.0 |
+| name         | default | options                                           |
+| ------------ | ------- | ------------------------------------------------- |
+| output-dir   | docs    | Your yard product dir                             |
+| ruby-version | 3.2     | See options in https://github.com/ruby/setup-ruby |
 
-Planning to be able to specify the ruby-version
+### Ruby version
+
+| action  | ruby                               |
+| ------- | ---------------------------------- |
+| v1.2.0+ | Specify with `ruby-version` option |
+| v1.1.0  | 3.2                                |
+| v1.0.0  | 3.1                                |
+
+Since v1.2.0, we can specify the version. However .ruby-version is still ignored for now.
 
 ## Example
 
