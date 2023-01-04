@@ -36,6 +36,7 @@ concurrency:
 
 jobs:
   deploy_yard:
+    # the deploy environment (not to be confused with env)
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -43,6 +44,7 @@ jobs:
     name: Build and deploy YARD
     steps:
       - uses: kachick/deploy-yard-to-pages@v1.2.0
+        id: deployment
         # with:
           # # default `doc` as default of `.yardopts`
           # output-dir: 'docs'

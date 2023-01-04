@@ -13,6 +13,11 @@ inputs:
     description: 'YARD runner will be executed with this ruby version'
     required: true
     default: '3.2'
+outputs:
+  page_url:
+    description: "github page url"
+    value: ${{ steps.deployment.outputs.page_url }}
+
 runs:
   using: 'composite'
   steps:
