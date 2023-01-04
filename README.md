@@ -54,7 +54,7 @@ jobs:
 
 | name         | default | options                                           |
 | ------------ | ------- | ------------------------------------------------- |
-| output-dir   | docs    | Your yard product dir                             |
+| output-dir   | docs    | Your YARD product dir                             |
 | ruby-version | 3.2     | See options in https://github.com/ruby/setup-ruby |
 
 ### Ruby version
