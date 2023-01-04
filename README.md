@@ -43,7 +43,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Build and deploy YARD
     steps:
-      - uses: kachick/deploy-yard-to-pages@v1.2.0
+      - uses: kachick/deploy-yard-to-pages@v1.3.0
         id: deployment
         # with:
           # # default `doc` as default of `.yardopts`
