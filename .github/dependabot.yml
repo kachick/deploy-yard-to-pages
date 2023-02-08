@@ -4,14 +4,15 @@ updates:
     directory: '/'
     schedule:
       interval: 'daily'
-      time: '08:00'
-      timezone: 'Asia/Tokyo'
-  - package-ecosystem: 'npm'
+  - package-ecosystem: 'bundler'
     directory: '/'
     schedule:
-      interval: 'daily'
-      time: '08:00'
-      timezone: 'Asia/Tokyo'
+      interval: 'weekly'
+    versioning-strategy: increase
     ignore:
-      - dependency-name: '@types/*'
-        update-types: ['version-update:semver-major']
+      - dependency-name: 'rubocop'
+        versions:
+          # https://github.com/rubocop/rubocop/pull/10796
+          - '1.31.2'
+          # https://github.com/rubocop/rubocop/issues/11549
+          - '1.45.0'
