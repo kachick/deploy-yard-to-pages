@@ -35,4 +35,4 @@ runs:
         # By default, upload the docs directory
         path: ${{ inputs.output-dir }}
     - id: deployment
-      uses: actions/deploy-pages@v1
+      uses: actions/deploy-pages@v2
