@@ -4,6 +4,10 @@
 
 Deploy YARD generated documents to GitHub Pages with composite action
 
+**NOTE**
+It performs simple tasks, and exists only as a note about how to deploy.\
+You can avoid to depend this action and manually set up the workflows yourself.
+
 # Usage
 
 For example of `.github/workflows/pages.yml`
