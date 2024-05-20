@@ -47,13 +47,13 @@ jobs:
     runs-on: ubuntu-24.04
     name: Build and deploy YARD
     steps:
-      - uses: kachick/deploy-yard-to-pages@v1.3.0
+      - uses: kachick/deploy-yard-to-pages@v1.4.0
         id: deployment
         # with:
           # # default `doc` as default of `.yardopts`
           # output-dir: 'docs'
-          # # default version is 3.2
-          # ruby-version: '3.2'
+          # # default version is 3.3
+          # ruby-version: 'head'
 ```
 
 ## Parameters
@@ -61,7 +61,7 @@ jobs:
 | name         | default | options                                             |
 | ------------ | ------- | --------------------------------------------------- |
 | output-dir   | doc     | Your YARD product dir                               |
-| ruby-version | 3.2     | See options in <https://github.com/ruby/setup-ruby> |
+| ruby-version | 3.3     | See options in <https://github.com/ruby/setup-ruby> |
 
 ### Ruby version
 

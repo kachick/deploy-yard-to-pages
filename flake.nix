@@ -22,7 +22,7 @@
               # https://github.com/kachick/dotfiles/pull/228
               bashInteractive
 
-              ruby_3_2
+              ruby_3_3
               dprint
               yamlfmt
               nil
