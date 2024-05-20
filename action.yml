@@ -27,6 +27,7 @@ runs:
     - name: Install libyaml
       if: runner.os == 'Linux'
       run: sudo apt-get install --no-install-recommends --assume-yes libyaml-dev
+      shell: bash
     - name: Checkout
       uses: actions/checkout@v4
     - uses: ruby/setup-ruby@v1
