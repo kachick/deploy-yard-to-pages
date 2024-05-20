@@ -12,7 +12,7 @@ inputs:
   ruby-version:
     description: 'YARD runner will be executed with this ruby version'
     required: true
-    default: '3.2'
+    default: '3.3'
 outputs:
   page_url:
     description: 'github page url'
