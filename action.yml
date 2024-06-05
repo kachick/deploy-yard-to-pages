@@ -21,13 +21,6 @@ outputs:
 runs:
   using: 'composite'
   steps:
-    # libyaml is needed for psych, see https://github.com/actions/runner-images/issues/9895
-    # GitHub installs libyaml-dev in latest runners, but often dropped in new runners.
-    # So, make sure to check here even if using runner installed.
-    - name: Install libyaml
-      if: runner.os == 'Linux'
-      run: sudo apt-get install --no-install-recommends --assume-yes libyaml-dev
-      shell: bash
     - name: Checkout
       uses: actions/checkout@v4
     - uses: ruby/setup-ruby@v1
