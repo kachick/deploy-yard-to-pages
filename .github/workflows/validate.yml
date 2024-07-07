@@ -25,7 +25,8 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  validate: # make sure the action works on a clean machine without building
+  # make sure the action works on a clean machine without building
+  validate:
     # https://github.com/actions/deploy-pages/issues/9
     environment:
       name: github-pages

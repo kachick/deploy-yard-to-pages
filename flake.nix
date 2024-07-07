@@ -24,7 +24,6 @@
 
               ruby_3_3
               dprint
-              yamlfmt
               nil
               nixpkgs-fmt
               typos
