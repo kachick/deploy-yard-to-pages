@@ -3,5 +3,5 @@
 source('https://rubygems.org')
 
 group(:development) do
-  gem('yard', '~> 0.9.36', require: false)
+  gem('yard', '~> 0.9.37', require: false)
 end
