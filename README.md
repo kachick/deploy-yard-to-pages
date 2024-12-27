@@ -2,11 +2,16 @@
 
 [![CI](https://github.com/kachick/deploy-yard-to-pages/actions/workflows/validate.yml/badge.svg?branch=main)](https://github.com/kachick/deploy-yard-to-pages/actions/workflows/validate.yml?query=branch%3Amain++)
 
+- _**This repository is archived**_
+- _**No longer maintained**_
+
+---
+
 Deploy YARD generated documents to GitHub Pages with composite action
 
 **NOTE**
 It performs simple tasks, and exists only as a note about how to deploy.\
-You can avoid to depend this action and manually set up the workflows yourself.
+[You can avoid to depend this action and manually set up the workflows yourself](https://github.com/kachick/ruby-ulid/commit/a88b4c7a14fdcf119950431abc515e0b34f629e7).
 
 # Usage
 
